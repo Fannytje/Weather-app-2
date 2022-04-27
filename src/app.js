@@ -23,6 +23,34 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class=row>`;
+  let days =["Thur", "Fri", "Sat"];
+  days.forEach(function(day){
+    forecastHTML = forecastHTML + `
+          <div class="col-2">
+            <div class="forecast-day">
+              ${day}
+            </div>
+            <img
+              class="forecast-icon"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt=""
+              width="48"
+              />
+            <div class="forecast-temperature">
+              <span class="temp-max">12°</span>   
+              <span class="temp-min">6°</span>
+            </div>
+          </div>
+      `
+  });
+  
+  forecastHTML = forecastHTML + `</div>`
+  forecastElement.innerHTML = forecastHTML;   
+}
+
 function showWeather(response) {
   let cityElement = document.querySelector("#city")
   let temperatureElement = document.querySelector("#temperature");
@@ -64,3 +92,4 @@ form.addEventListener("submit", handleSubmit);
 axios.get(apiURl).then(showWeather);
 
 search("Amsterdam");
+displayForecast();
