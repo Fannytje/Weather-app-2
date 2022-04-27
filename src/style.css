@@ -18,6 +18,7 @@ ul{
 li {
   color: #878787;
   font-size: 16px;
+  text-transform: capitalize;
 }
 
 .weather-app-wrapper {
