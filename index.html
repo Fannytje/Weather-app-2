@@ -10,36 +10,49 @@
     <title>Check the weather ⛅</title>
 </head>
 <body>
-  <div class="container">
-    <h1>
-      Paris
-    </h1>
-    <div class="row">
-      <ul class="col-6">
-        <li>
-          Last updated: Wednesday 10:30
-        </li>
-        <li>
-          Scattered clouds
-        </li>
-        <li>
-          <img 
-          src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
-          alt="">
-          12 ° C 
-        </li>
+  <div class="weather-app-wrapper">
+    <div class="container">
+      <div class="overview">
+      <h1>
+        Paris
+      </h1>
+        <ul>
+          <li>
+            Last updated: Wednesday 10:30
+          </li>
+          <li>
+            Scattered clouds
+          </li>
         </ul>
-        <ul class="col-6">
-        <li>
-          Humidity: 65%
-        </li>
-        <li>
-          Wind: 2km/h
-        </li>
-      </ul>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="clearfix weather-temperature">
+            <img 
+            src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
+            alt="Clear" 
+            id="icon" 
+            class="float-left"
+            />
+            <span>
+              <strong id="temperature" class="temperature">12</strong><span class="units"> °C</span>
+            </span>
+          </div>
+        </div>
+        <div class="col-6">
+            <ul>
+            <li>
+              Humidity: 65%
+            </li>
+            <li>
+              Wind: 2km/h
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    <small><a href="https://github.com/Fannytje/Weather-app-2">Open-source code</a> by Fanny N.</small>
     </div>
-  </div>
-  <a href="https://github.com/Fannytje/Weather-app-2">Open-source code</a> by Fanny N.
   <script src="src/app.js"></script>
 </body>
 </html>
