@@ -86,7 +86,7 @@ function showWeather(response) {
   humidityElement.innerHTML = (response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute
-    ("src", `http://openweathermap.org/img/wn/${(response.data.weather[0].icon)}@2x.png`)
+    ("src", `src/icons/${response.data.weather[0].icon}.png`)
   iconElement.setAttribute
     ("alt", `${(response.data.weather[0].description)}`);
 
