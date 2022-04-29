@@ -118,5 +118,3 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 axios.get(apiURl).then(showWeather);
-
-search("Amsterdam");
